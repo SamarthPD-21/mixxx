@@ -432,13 +432,7 @@ void DlgTagFetcher::applyCover() {
 }
 
 void DlgTagFetcher::retry() {
-    btnRetry->setDisabled(true);
-    btnApply->setDisabled(true);
-    checkBoxTags->setDisabled(true);
-    checkBoxCover->setDisabled(true);
-    loadingProgressBar->setValue(kMinimumValueOfQProgressBar);
-    loadingProgressBar->setToolTip(QString());
-    m_tagFetcher.startFetch(m_pTrack);
+    loadTrack(m_pTrack);
 }
 
 void DlgTagFetcher::quit() {
